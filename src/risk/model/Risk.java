@@ -25,4 +25,13 @@ public class Risk
 		return validLength;
 	}
 	
+	public boolean quitChecker(String exitString)
+	{
+		if (exitString.equalsIgnoreCase("quit"))
+		{
+			return true;
+		}
+		return false;
+	}
+	
 }

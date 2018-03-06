@@ -16,6 +16,8 @@ public class RiskController
 		
 		display = new RiskDisplay();
 		appFrame = new RiskFrame(this);
+		
+		
 	}
 	
 	public void start()
@@ -23,6 +25,21 @@ public class RiskController
 		display.displayText("Welcome Conqueror");
 		
 	}
+	
+//	public String interactWithRisk (String input)
+//	{
+//		String risk = "";
+//		
+//		if(risk.quitChecker(input))
+//		{
+//			close();
+//		}
+//	
+//		riskSays += risk.processConversation(input);
+//		
+//		return riskSays;
+//		
+//	}
 	
 	public RiskDisplay getDisplay()
 	{
