@@ -1,8 +1,11 @@
 package risk.view;
 
-import risk.controller.RiskController;
+import risk.controller.*;
+import risk.view.*;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class RiskPanel extends JPanel
 {
@@ -12,7 +15,7 @@ public class RiskPanel extends JPanel
 	private JTextField commandField;
 	private SpringLayout appLayout;
 	private JLabel commandLabel;
-	
+	private JScrollPane commandScrollPane;
 	
 	
 	public RiskPanel(RiskController appController)
@@ -24,6 +27,8 @@ public class RiskPanel extends JPanel
 		commandField = new JTextField(20);
 		commandLabel = new JLabel("Type here to command your troops");
 		appLayout = new SpringLayout();
+		commandScrollPane = new JScrollPane();
+		
 		
 		executeButton = new JButton("Execute");
 		
@@ -31,6 +36,18 @@ public class RiskPanel extends JPanel
 		setupPanel();
 		setupLayout();
 		setupListeners();
+		setupScrollPane();
+		
+		
+	}
+	
+	private void setupScrollPane()
+	{
+		
+		
+		commandScrollPane.setViewportView(convoArea);
+		commandScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		commandScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 		
 		
 	}
@@ -65,6 +82,9 @@ public class RiskPanel extends JPanel
 	
 	private void setupListeners()
 	{
+		
+		
+			
 		
 	}
 

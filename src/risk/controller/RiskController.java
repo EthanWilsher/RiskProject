@@ -26,20 +26,20 @@ public class RiskController
 		
 	}
 	
-//	public String interactWithRisk (String input)
-//	{
-//		String risk = "";
-//		
-//		if(risk.quitChecker(input))
-//		{
-//			close();
-//		}
-//	
-//		riskSays += risk.processConversation(input);
-//		
-//		return riskSays;
-//		
-//	}
+	public String interactWithRisk (String input)
+	{
+		String risk = "";
+		
+		if(risk.quitChecker(input))
+		{
+			close();
+		}
+	
+		riskSays += risk.processConversation(input);
+		
+		return riskSays;
+		
+	}
 	
 	public RiskDisplay getDisplay()
 	{
