@@ -45,7 +45,7 @@ public class RiskPanel extends JPanel
 	{
 		
 		
-		commandScrollPane.setViewportView(convoArea);
+//		commandScrollPane.setViewportView(convoArea);
 		commandScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		commandScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 		
@@ -54,6 +54,7 @@ public class RiskPanel extends JPanel
 	
 	private void setupPanel()
 	{
+		//start abstraction
 		this.setBackground( new Color (158, 117, 46));
 		this.setLayout(appLayout);
 		this.add(executeButton);
@@ -62,6 +63,9 @@ public class RiskPanel extends JPanel
 		this.add(commandLabel);
 		convoArea.setEnabled(false);
 		convoArea.setEditable(false);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		add(scrollPane);
 	
 		
 	}
@@ -83,9 +87,18 @@ public class RiskPanel extends JPanel
 	private void setupListeners()
 	{
 		
-		
+		executeButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				String userText = commandField.getText();
+				String displayText = appController.interactWithRisk(userText);
+				convoArea.append(displayText);
+				commandField.setText("");
+			}
+
+		});
 			
 		
 	}
-
 }

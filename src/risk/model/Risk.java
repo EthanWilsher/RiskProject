@@ -1,5 +1,7 @@
 package risk.model;
 
+
+
 public class Risk
 {
 
@@ -10,7 +12,12 @@ public class Risk
 	
 	
 	
-	
+	public String processConversation(String input)
+	{
+		String chatbotResponse = "";
+
+		return chatbotResponse;
+	}
 	
 	
 	public boolean lengthChecker(String input)

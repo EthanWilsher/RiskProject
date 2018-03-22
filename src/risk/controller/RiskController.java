@@ -2,6 +2,7 @@ package risk.controller;
 
 import risk.view.*;
 import risk.model.*;
+import risk.controller.*;
 
 public class RiskController
 {
@@ -28,7 +29,7 @@ public class RiskController
 	
 	public String interactWithRisk (String input)
 	{
-		String risk = "";
+		String riskSays = "";
 		
 		if(risk.quitChecker(input))
 		{
@@ -39,6 +40,18 @@ public class RiskController
 		
 		return riskSays;
 		
+	}
+	
+	public Risk getRisk()
+	{
+		
+		return risk;
+	}
+	
+	private void close()
+	{
+		display.displayText("Goodbye");
+		System.exit(0);
 	}
 	
 	public RiskDisplay getDisplay()
