@@ -37,6 +37,7 @@ public class RiskPanel extends JPanel
 		setupLayout();
 		setupListeners();
 		setupScrollPane();
+		initialMessage("Start yo journey");
 		
 		
 	}
@@ -100,5 +101,10 @@ public class RiskPanel extends JPanel
 		});
 			
 		
+	}
+	
+	public void initialMessage(String talk)
+	{
+		convoArea.append(talk);
 	}
 }

@@ -3,6 +3,7 @@ package risk.controller;
 import risk.view.*;
 import risk.model.*;
 import risk.controller.*;
+import java.util.Scanner;
 
 public class RiskController
 {
@@ -19,12 +20,26 @@ public class RiskController
 		appFrame = new RiskFrame(this);
 		
 		
+		
 	}
 	
 	public void start()
 	{
 		display.displayText("Welcome Conqueror");
 		
+	}
+	
+	public void story()
+	{
+		System.out.println("Welcome to this faboulus adventure");
+		GameScene = 0;
+		
+		if (GameScene = 0)
+		{
+			System.out.println("You command a troop of 10 soldiers with 20 rations");
+			
+			
+		}
 	}
 	
 	public String interactWithRisk (String input)
@@ -63,6 +78,8 @@ public class RiskController
 	{
 		display.displayText(error.getMessage());
 	}
+	
+
 	
 	
 }

@@ -14,10 +14,7 @@ public class RiskDisplay
 		
 	}
 	
-	public void displayText(String message)
-	{
-		JOptionPane.showMessageDialog(null,  message, windowTitle, JOptionPane.INFORMATION_MESSAGE, icon);
-	}
+	
 	
 	public String collectResponse(String question)
 	{
@@ -29,4 +26,22 @@ public class RiskDisplay
 		
 	}
 	
+	public void displayText(String textToDisplay)
+	{
+		JOptionPane.showMessageDialog(null, textToDisplay);
+	}
+
+
+		public String getResponse(String questionAsked)
+		{
+			String response = "";
+			
+			response += JOptionPane.showInputDialog(null, questionAsked);
+			
+			return response;
+			
+		}
 }
+
+	
+
