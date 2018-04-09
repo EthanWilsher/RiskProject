@@ -93,7 +93,6 @@ public class RiskPanel extends JPanel
 			public void actionPerformed(ActionEvent click)
 			{
 				String userText = commandField.getText();
-				String displayText = appController.interactWithRisk(userText);
 				convoArea.append(displayText);
 				commandField.setText("");
 			}
