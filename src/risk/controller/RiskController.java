@@ -42,20 +42,7 @@ public class RiskController
 		}
 	}
 	
-	public String interactWithRisk (String input)
-	{
-		String riskSays = "";
-		
-		if(risk.quitChecker(input))
-		{
-			close();
-		}
 	
-		riskSays += risk.processConversation(input);
-		
-		return riskSays;
-		
-	}
 	
 	public Risk getRisk()
 	{
