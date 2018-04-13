@@ -11,28 +11,21 @@ public class RiskController
 	private Risk risk;
 	private RiskFrame appFrame;
 	
-	
-	
 	public RiskController()
 	{
-		
 		display = new RiskDisplay();
 		appFrame = new RiskFrame(this);
-		
-		
-		
 	}
 	
 	public void start()
 	{
 		display.displayText("Welcome Conqueror");
-		
 	}
 	
 	public void story()
 	{
 		System.out.println("Welcome to this faboulus adventure");
-		GameScene = 0;
+		int GameScene = 0;
 		
 		if (GameScene = 0)
 		{
@@ -40,13 +33,14 @@ public class RiskController
 			
 			
 		}
+		else if(GameScene = 1)
+		{
+			
+		}
 	}
-	
-	
 	
 	public Risk getRisk()
 	{
-		
 		return risk;
 	}
 	
